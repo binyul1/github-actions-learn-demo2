@@ -6,18 +6,20 @@ on:
 
 jobs:
   unit-test:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      
-      - name: Install dependencies
-        run: pip install -r backend/requirements.txt
+        runs-on: self-hosted
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v2
+          - name: Set up Python
+            uses: actions/setup-python@v5
+            with:
+              python-version: '3.12'
+          
+          - name: Install dependencies
+            run: pip install -r backend/requirements.txt
 
-      - name: Run unit tests 
-        run: PYTHONPATH=backend pytest backend/tests -v
+          - name: Run unit tests 
+            run: PYTHONPATH=backend pytest backend/tests -v
 
   build: 
     runs-on: self-hosted
