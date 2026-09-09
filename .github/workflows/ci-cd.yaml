@@ -41,9 +41,9 @@ jobs:
             context: ./backend
             push: true
             tags: |
-                binyul1/github-actions-learn-demo2:latest
-                binyul1/github-actions-learn-demo2:${{ github.sha }}
-                binyul1/github-actions-learn-demo2:${{ github.run_name }}
+                binyul11/github-actions-learn-demo2:latest
+                binyul11/github-actions-learn-demo2:${{ github.sha }}
+                binyul11/github-actions-learn-demo2:${{ github.run_name }}
   deploy:
     runs-on: self-hosted
     needs: build
