@@ -50,6 +50,10 @@ def add_user():
     conn.commit()
     conn.close()
     return jsonify({"message": f"User {name} added successfully!"}), 201
- 
+
+@app.route("/health")
+def health():
+    return jsonify({"status": "healthy"}), 200
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
