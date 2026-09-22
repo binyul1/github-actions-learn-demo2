@@ -6,7 +6,7 @@ services:
     environment:
       - DB_HOST=db
       - DB_USER=appuser
-      - DB_PASSWORD=apppassword
+      - DB_PASS=apppassword
       - DB_NAME=mydb
     depends_on:
       - db
