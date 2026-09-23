@@ -23,13 +23,13 @@ def get_users():
 @app.route("/")
 def home():
     return """
-<h1>Welcome to Flask App created by binyul</h1>
+<h1>Welcome to Flask App created by binyul shrestha</h1>
 <p>Use the following curl commands to interact with the API:</p>
 <ul>
 <li><b>View users:</b><br>
-<code>curl http://localhost:5000/api/users</code></li>
+<code>curl http://workernodeip:5000/api/users</code></li>
 <li><b>Add a user:</b><br>
-<code>curl -X POST http://localhost:5000/api/users -H "Content-Type: application/json" -d '{"name":"NewStudent"}'</code></li>
+<code>curl -X POST http://workernodeip:5000/api/users -H "Content-Type: application/json" -d '{"name":"NewStudent"}'</code></li>
 </ul>
     """
  
